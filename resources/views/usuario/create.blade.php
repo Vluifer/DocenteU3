@@ -1,8 +1,13 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('contenido')
-<h1>CREAR USUARIO</h1>
-<form action="/usuarios" method="POST">
+@section('title', 'Dashboard')
+
+@section('content_header')
+@stop
+
+@section('content')
+    <h3><p>Crear Usuario</p></h3>
+    <form action="/usuarios" method="POST">
     @csrf
     <div class="mb-3">
         <input type="hidden" id="codigo" name="codigo" class="form-control" tabindex="1">
@@ -30,4 +35,12 @@
     <a href="/usuarios" class="btn btn-secondary" tabindex="7">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="8">Guardar</button>
 </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

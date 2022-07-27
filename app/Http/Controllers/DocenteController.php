@@ -42,8 +42,6 @@ class DocenteController extends Controller
         $docentes->id_usuario = $request->get('id_usuario');
         $docentes->nombre = $request->get('nombre');
         $docentes->apellido = $request->get('apellido');
-        $docentes->email = $request->get('email');
-        $docentes->telefono = $request->get('telefono');
         $docentes->block = $request->get('block');
         $docentes->profesional = $request->get('profesional');
         $docentes->escalaron = $request->get('escalaron');

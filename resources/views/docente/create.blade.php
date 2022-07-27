@@ -1,8 +1,13 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('contenido')
-<h1>CREAR DOCENTE</h1>
-<form action="/docentes" method="POST">
+@section('title', 'LR')
+
+@section('content_header')
+@stop
+
+@section('content')
+    <h3><p>Crear Docente</p></h3>
+    <form action="/docentes" method="POST">
     @csrf
     <div class="mb-3">
         <input type="hidden" id="id" name="id" class="form-control" tabindex="1">
@@ -17,14 +22,6 @@
     <div class="mb-3">
         <label for="" class="form-label">Apellido</label>
         <input type="text" id="apellido" name="apellido" class="form-control" tabindex="4">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Email</label>
-        <input type="email" id="email" name="email" class="form-control" tabindex="5">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Telefono</label>
-        <input type="number" id="telefono" name="telefono" class="form-control" maxlength="10"  pattern="[0-9]+" tabindex="6">
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Block</label>
@@ -53,4 +50,12 @@
     <a href="/docentes" class="btn btn-secondary" tabindex="13">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="14">Guardar</button>
 </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

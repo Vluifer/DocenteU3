@@ -1,8 +1,13 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('contenido')
-<h1>EDITAR DOCENTE</h1>
-<form action="/docentes/{{@$docentes->id}}" method="POST">
+@section('title', 'LR')
+
+@section('content_header')
+<h3><p>Editar Docente</p></h3>
+@stop
+
+@section('content')
+    <form action="{{url('/docentes/'.$docente->id)}}" method="POST">
     @csrf
     @method('PUT')
     <div class="mb-3">
@@ -16,14 +21,6 @@
     <div class="mb-3">
         <label for="" class="form-label">Apellido</label>
         <input type="text" id="apellido" name="apellido" value="{{@$docente->apellido}}" class="form-control" tabindex="4">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Email</label>
-        <input type="email" id="email" name="email" value="{{@$docente->email}}" class="form-control" tabindex="5">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Telefono</label>
-        <input type="number" id="telefono" name="telefono" value="{{@$docente->telefono}}" class="form-control" maxlength="10"  pattern="[0-9]+" tabindex="6">
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Block</label>
@@ -53,4 +50,12 @@
     <a href="/docentes" class="btn btn-secondary" tabindex="7">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="8">Guardar</button>
 </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

@@ -1,16 +1,16 @@
-<!-- Extendemos la vista que estamos indicando -->
-@extends('layouts.plantillabase')
+<!-- Con esto extendemos nuesto panel de administreacion adminlte -->
 
-@section('css')
-<!-- referenciamos los estilos de bootstrao de dataTable -->
-<link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-@endsection
+@extends('adminlte::page')
 
-<!-- Extendemos el comtenido en espeficico que queremos -->
-@section('contenido')
-<!-- Aqui dentro el contenido que queremos de esta vista en especifico -->
+@section('title', 'LR')
 
-<!-- refertenciamos al metodo crear crearUsuario que se encuntra en la clase  UsuarioController -->
+@section('')
+    <h1>Config usuarios</h1>
+@stop
+
+@section('content')
+    <p><h2>Panel administración Usuario</h2></p>
+    <!-- refertenciamos al metodo crear crearUsuario que se encuntra en la clase  UsuarioController -->
 <a href="usuarios/create" class="btn btn-primary mb-3 shadow-lg mt-4">CREAR</a>
 <table id="usuarios" class="table table-striped" style="width:100%">
     <thead class="bg-primary text-white">
@@ -51,9 +51,14 @@
     </tbody>
     </thead>
 </table>
+@stop
 
-<!-- Referenciamos los archivos de js y jq de dataTable, son
-los que le daran la funcionalidad a nuestro dataTable -->
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <!-- referenciamos los estilos de bootstrao de dataTable -->
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+@stop
+
 @section('js')
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -67,7 +72,4 @@ los que le daran la funcionalidad a nuestro dataTable -->
     });
 });
 </script>
-@endsection
-
-
-@endsection
+@stop
