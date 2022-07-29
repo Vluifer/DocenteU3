@@ -102,11 +102,11 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
+    'classes_auth_card' => '',
+    'classes_auth_header' => 'bg-gradient-info',
     'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
+    'classes_auth_footer' => 'text-center',
+    'classes_auth_icon' => 'fa-lg text-info',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
     /*
@@ -246,7 +246,7 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-      /*   [
+        /*   [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
@@ -254,6 +254,11 @@ return [
             'label_color' => 'success',
         ], */
         ['header' => 'Configuracion de usuarios'],
+        [
+            'text' => 'Config Usuario',
+            'url'  => 'user/profile',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'Usuarios',
             'url'  => 'usuarios',
@@ -264,7 +269,7 @@ return [
             'url'  => 'docentes',
             'icon' => 'fas fa-fw fa-user',
         ],
-       /*  [
+        /*  [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -304,20 +309,17 @@ return [
         ], */
         [/* 'header' => 'labels' */],
         [
-           /*  'text'       => 'important',
+            /*  'text'       => 'important',
             'icon_color' => 'red',
-            'url'        => '#', */
-        ],
+            'url'        => '#', */],
         [
-           /*  'text'       => 'warning',
+            /*  'text'       => 'warning',
             'icon_color' => 'yellow',
-            'url'        => '#', */
-        ],
+            'url'        => '#', */],
         [
-           /*  'text'       => 'information',
+            /*  'text'       => 'information',
             'icon_color' => 'cyan',
-            'url'        => '#', */
-        ],
+            'url'        => '#', */],
     ],
 
     /*

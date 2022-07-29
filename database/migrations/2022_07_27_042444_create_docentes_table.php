@@ -15,6 +15,7 @@ class CreateDocentesTable extends Migration
     {
         Schema::create('docentes', function (Blueprint $table) {
             $table->integer('id',true);
+            $table->integer('id_usuario');
             $table->string('nombre',100);
             $table->string('apellido',100);
             $table->string('block',100);

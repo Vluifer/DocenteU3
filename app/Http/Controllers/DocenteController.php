@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class DocenteController extends Controller
 {
+    /* Este constructos lo utilizamos para que no puedan
+    acceder a ninguna de estas dirreciones desde la url, haciendo
+    referencia añ middleware de autenticacion  */
+
+    public function __constructor()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -53,17 +61,6 @@ class DocenteController extends Controller
         
         return redirect('docentes');
 
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

@@ -38,13 +38,13 @@
             <td>{{$docente->area_trabajo}}</td>
             <td>
                 <form action="{{route ('docentes.destroy',@$docente->id)}}" method="POST">
-                    <a href="/docentes/{{$docente->id}}/edit" ><i class="fa fa-pencil-square-o"></i></a>
+                    <a href="/docentes/{{$docente->id}}/edit" class="btn btn-info">Editar</a>
                     <!-- Se utliza esta notación para evitar errores de http que se convierten en vulnerabilidad -->
                     @csrf
                     <!-- El metodo del envio del formulario es post, pero laravel recomienda
                      que se ponga esta notacion DELETE de esta forma para que se pueda completar la acción -->
                     @method('DELETE')
-                    <button type="submit" value="Eliminar"><i class="fa fa-trash-o"></i></button>
+                    <button type="submit" value="Eliminar"  class="btn btn-danger">Eliminar</button>
                 </form>
             </td>
         </tr>

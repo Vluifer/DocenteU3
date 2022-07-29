@@ -7,6 +7,12 @@ use App\Models\Usuario;
 
 class UsuarioController extends Controller
 {
+
+    public function __constructor()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -56,10 +62,6 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
